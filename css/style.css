@@ -1,0 +1,427 @@
+:root{
+    --Dark-Blue: #2B2D42;
+    --Light-Blue: #8D99AE;
+    --White: #EDF2F4;
+    --Light-Red: #EF233C;
+    --Dark-Red: #D90429;
+}
+@font-face{
+    font-family: Century-Gothic;
+    src: url(../Fonts/Century\ Gothic.otf);
+}
+@font-face {
+    font-family: Century-Gothic-Bold;
+    src: url(../Fonts/Century\ Gothic\ Bold.otf);
+}
+
+*{
+    font-family: Century-Gothic;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    max-width: 100vw;
+}
+
+body{
+    max-width: 100vw;
+}
+
+.container{
+    width: 100%;
+    background-color: var(--Dark-Blue);
+    position: relative;
+}
+
+hr{
+    border: none;
+    height: 5px;
+    width: 100%;
+    background-color: var(--White);
+    position: absolute;
+    bottom: 0;
+}
+
+.logo a{
+    font-family: Century-Gothic-Bold;
+    color: var(--White);
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.arrow-down{
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+}
+
+.arrow-down:hover{
+    transition: .5s;
+    margin-bottom: 10px;
+}
+
+.arrow-up{
+    width: 50px;
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+}
+
+.arrow-up:hover{
+    transition: .5s;
+    margin-top: 10px;
+}
+
+.wrapper{
+    margin: auto;
+    height: 100%;
+    width: 1175px;
+}
+
+/** ################################## HEADER ########################*/
+header{
+    height: 85px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1175px;
+}
+
+.header-container ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.header-container ul li a{
+    text-decoration: none;
+    color: var(--White);
+    font-size: 1.25rem;
+}
+
+.header-container ul li a:hover{
+    color: var(--Dark-Red);
+    transition: .5s;
+}
+
+.header-content{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.header-content .btn{
+    font-family: Century-Gothic-Bold;
+    text-decoration: none;
+    color: var(--White);
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 100%;
+    background-color: var(--Dark-Red);
+    padding: 10px 15px;
+    box-shadow: 3px 5px 7px 0 hsla(0, 0%, 0%, 0.25);
+}
+
+.header-content .btn:hover{
+    background-color: var(--Light-Red);
+    transition: .5s;
+}
+
+/** ################################# HERO ###########################*/
+
+.hero .gradient{
+    background: linear-gradient(to bottom, var(--Dark-Blue) 20%, hsla(235, 21%, 21%, 0.9));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero{
+    background: url('/img/background.jpg') center/cover;
+    height: 100vh;
+    position: relative;
+}
+
+.hero h1{
+    font-size: 5.625rem;
+    text-align: center;
+    line-height: 105%;
+    text-transform: uppercase;
+}
+
+.hero h1 span{
+    font-family: Century-Gothic-Bold;
+}
+
+.liberte{
+    color: var(--Light-Blue);
+}
+
+.egalite{
+    color: var(--White);
+}
+
+.fraternite{
+    color: var(--Dark-Red);
+}
+
+.hero p{
+    font-size: 1.125rem;
+    width: 600px;
+    text-align: center;
+    color: var(--White);
+    margin: 20px 0 20px 0;
+}
+
+.hero .btns{
+    display: flex;
+    gap: 16px;
+}
+
+.hero .btns a{
+    font-family: Century-Gothic-Bold;
+    text-decoration: none;
+    color: var(--White);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    line-height: 100%;
+}
+
+/* .hero .btns :nth-child(1){
+    background-color: var(--Dark-Red);
+    padding: 10px 20px;
+}*/
+
+/* .hero .btns :nth-child(1):hover{
+    background-color: var(--Light-Red);
+    transition: .3s;
+}  */
+
+.hero .btns :nth-child(1){
+    border: 1px solid var(--Light-Blue);
+    padding: 15px 20px;
+}
+.hero .btns :nth-child(1):hover{
+    background-color: var(--Light-Blue);
+    transition: .3s;
+}
+
+
+
+/** ########################################## ABOUT ###############################*/
+.about{
+    height: 100vh ;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: url(/img/background2.jpeg) no-repeat;
+    background-position: 650px 250px;
+    background-size: 1440px;
+}
+
+.about .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+}
+
+.about .gradient{
+    /* background: radial-gradient(145deg, var(--Dark-Blue) 55%, hsla(235, 21%, 21%, 0.65)); */
+    background: radial-gradient(circle at 70% 65%, hsla(235, 21%, 21%, 0.85) 15%, var(--Dark-Blue) 30%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.about .title{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.about .content{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.about #p2{
+    width: 625px;
+}
+
+.about #p3{
+    width: 590px;
+}
+
+.about p{
+    font-size: 1.125rem;
+    color: var(--White);
+}
+
+.about h1{
+    font-size: 5.625rem;
+    text-transform: uppercase;
+    font-family: Century-Gothic-Bold;
+    color: var(--White);
+}
+
+.about .bar{
+    width: 6px;
+    height: 85px;
+    background-color: var(--Dark-Red);
+}
+
+/** ################################# FAQ ##########################*/
+
+.faq-container{
+    height: 100vh ;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-container h1{
+    font-size: 5.625rem;
+    text-transform: uppercase;
+    font-family: Century-Gothic-Bold;
+    color: var(--White);
+    margin-bottom: 60px;
+}
+
+.faq{
+    margin: 16px 0;
+    width: 600px;
+    border-bottom: 2px solid var(--White);
+    padding-bottom: .75rem;
+    cursor: pointer;
+}
+
+.faq-container h2{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: Century-Gothic-bold;
+    color: var(--White);
+    width: 550px;
+}
+
+.faq-container .question svg{
+    width: 35px;
+}
+
+.faq-container p{
+    padding: 8px 0;
+    color: var(--White);
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
+.faq.active .answer{
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+.faq.active svg{
+    transform: rotate(180deg);
+}
+svg{
+    transition: transform 0.5s ease-in;
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/** ########################### FOOTER ########################*/
+footer{
+    background-color: #14151F;
+}
+
+footer h2{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-family: Century-Gothic-Bold;
+    color: var(--White);
+    padding-top: 48px;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 1.125rem;
+    color: var(--White);
+}
+
+footer a:hover{
+    color: var(--Light-Red);
+    transition: .5s;
+}
+
+.icons{
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+.icons i{
+    color: var(--White);
+    font-size: 28px;
+}
+.icons i:hover{
+    color: var(--Light-Red);
+    transition: .5s;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--White);
+}
+
+.footer-bottom{
+    padding: 24px 0 48px 0;
+}
+
+.footer-bottom p{
+    width: 600px;
+    font-size: .813rem;
+    color: var(--White);
+}
